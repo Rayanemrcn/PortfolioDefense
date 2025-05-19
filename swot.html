@@ -1,66 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SWOT - Hôpital Militaire Reine Astrid</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analyse SWOT - Hôpital Militaire Reine Astrid</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
-
     body {
-      font-family: 'Orbitron', sans-serif;
+      font-family: Arial, sans-serif;
+      background-color: #2c2c2c;
       margin: 0;
-      background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+      padding: 0;
+      color: #fff;
+      background-image: url('f08741e9-706b-4909-a76a-6a0152da0bcf.png');
+      background-size: 75%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
       padding: 2rem;
-      color: #f0f0f0;
-      overflow-x: hidden;
-      animation: pulseBackground 10s infinite ease-in-out;
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
-
-    @keyframes pulseBackground {
-      0%, 100% { background-position: left; }
-      50% { background-position: right; }
-    }
-
     h1 {
       text-align: center;
-      font-size: 3rem;
+      font-size: 2.2rem;
+      color: #fdd835;
       margin-bottom: 2rem;
-      color: #00e5ff;
-      text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
-      position: relative;
-      z-index: 1;
+      text-shadow: 1px 1px 4px #000;
     }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
       margin-top: 2rem;
-      transform: skewY(-1deg);
-      position: relative;
-      z-index: 1;
     }
-
     .box {
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 15px;
-      box-shadow: 0 0 25px rgba(0, 229, 255, 0.2);
-      padding: 1.8rem;
-      backdrop-filter: blur(8px);
-      transform: skewY(1deg);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      background-color: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 1.5rem;
+      border-left: 5px solid #00bcd4;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
-
-    .box:hover {
-      transform: scale(1.05) skewY(1deg);
-      box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-    }
-
-    .strengths { border-left: 5px solid #00e676; }
-    .weaknesses { border-left: 5px solid #ff1744; }
-    .opportunities { border-left: 5px solid #2979ff; }
-    .threats { border-left: 5px solid #ffd600; }
+    .strengths { border-left-color: #00e676; }
+    .weaknesses { border-left-color: #ff1744; }
+    .opportunities { border-left-color: #2979ff; }
+    .threats { border-left-color: #ffd600; }
 
     h2 {
       margin-top: 0;
@@ -68,105 +56,66 @@
       border-bottom: 1px dashed #ccc;
       padding-bottom: 0.3rem;
     }
-
     ul {
       padding-left: 1.5rem;
     }
-
     li {
       margin-bottom: 0.6rem;
       line-height: 1.5;
     }
-
     .footer {
-      margin-top: 4rem;
+      margin-top: 3rem;
       text-align: center;
-      font-size: 0.9rem;
-      color: #bbb;
-    }
-
-    /* Animation des tirs */
-    .shooter {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background: url('https://cdn-icons-png.flaticon.com/512/732/732225.png') no-repeat center;
-      background-size: contain;
-      animation: shoot 2s ease-out forwards;
-      pointer-events: none;
-      z-index: 2;
-    }
-
-    @keyframes shoot {
-      0% {
-        opacity: 0;
-        transform: translateY(100vh) scale(0.5);
-      }
-      50% {
-        opacity: 1;
-        transform: translateY(-20vh) scale(1.2);
-      }
-      100% {
-        opacity: 0;
-        transform: translateY(-200vh) scale(0.8);
-      }
+      font-size: 0.85rem;
+      color: #ccc;
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      for (let i = 0; i < 5; i++) {
-        const shooter = document.createElement('div');
-        shooter.className = 'shooter';
-        shooter.style.left = Math.random() * 100 + 'vw';
-        document.body.appendChild(shooter);
-        setTimeout(() => shooter.remove(), 2000);
-      }
-    });
-  </script>
 </head>
 <body>
-  <h1>Analyse SWOT - Hôpital Militaire Reine Astrid</h1>
-  <div class="grid">
-    <div class="box strengths">
-      <h2>Forces (Strengths)</h2>
-      <ul>
-        <li>Infrastructure médicale de pointe : équipements modernes en traumatologie, rééducation, soins intensifs, chirurgie.</li>
-        <li>Personnel hautement qualifié : médecins militaires formés pour les situations d’urgence et les contextes de guerre.</li>
-        <li>Soutien gouvernemental : financement stable de l'État via le budget de la Défense.</li>
-        <li>Polyvalence : intervention en catastrophes, missions humanitaires, pandémies (COVID-19).</li>
-        <li>Accès aux réseaux internationaux : collaborations OTAN, UE.</li>
-      </ul>
+  <div class="container">
+    <h1><span style="color: #fdd835; font-weight: bold;">Analyse SWOT</span></h1>
+    <div class="grid">
+      <div class="box strengths">
+        <h2>Forces (Strengths)</h2>
+        <ul>
+          <li>Infrastructure médicale de pointe : équipements modernes en traumatologie, rééducation, soins intensifs, chirurgie.</li>
+          <li>Personnel hautement qualifié : médecins militaires formés pour les situations d’urgence et les contextes de guerre.</li>
+          <li>Soutien gouvernemental : financement stable de l'État via le budget de la Défense.</li>
+          <li>Polyvalence : intervention en catastrophes, missions humanitaires, pandémies (COVID-19).</li>
+          <li>Accès aux réseaux internationaux : collaborations OTAN, UE.</li>
+        </ul>
+      </div>
+      <div class="box weaknesses">
+        <h2>Faiblesses (Weaknesses)</h2>
+        <ul>
+          <li>Bureaucratie lourde : procédures lentes, faible flexibilité de gestion.</li>
+          <li>Recrutement difficile : faible attractivité du statut militaire pour les jeunes professionnels.</li>
+          <li>Manque d'innovation en gestion : lente adoption d'outils numériques modernes.</li>
+          <li>Dépendance aux décisions politiques : budget soumis aux choix gouvernementaux.</li>
+        </ul>
+      </div>
+      <div class="box opportunities">
+        <h2>Opportunités (Opportunities)</h2>
+        <ul>
+          <li>Partenariats civils-militaires : hôpitaux universitaires, centres de recherche.</li>
+          <li>Investissements européens dans la Défense et la santé.</li>
+          <li>Technologies avancées : télémédecine, robotique, intelligence artificielle.</li>
+          <li>Formation et simulation médicale : devenir centre d’excellence en simulation de soins d’urgence.</li>
+        </ul>
+      </div>
+      <div class="box threats">
+        <h2>Menaces (Threats)</h2>
+        <ul>
+          <li>Concurrence hospitalière civile : fuite des talents vers le secteur civil.</li>
+          <li>Risque de réductions budgétaires futures dans la Défense.</li>
+          <li>Vieillissement du personnel médical militaire.</li>
+          <li>Cyberattaques ciblant des données sensibles (patients, missions).</li>
+        </ul>
+      </div>
     </div>
-    <div class="box weaknesses">
-      <h2>Faiblesses (Weaknesses)</h2>
-      <ul>
-        <li>Bureaucratie lourde : procédures lentes, faible flexibilité de gestion.</li>
-        <li>Recrutement difficile : faible attractivité du statut militaire pour les jeunes professionnels.</li>
-        <li>Manque d'innovation en gestion : lente adoption d'outils numériques modernes.</li>
-        <li>Dépendance aux décisions politiques : budget soumis aux choix gouvernementaux.</li>
-      </ul>
+    <div class="footer">
+      Réalisé par BOUABDALLAH Rayane – Gestion entrepreneuriale
     </div>
-    <div class="box opportunities">
-      <h2>Opportunités (Opportunities)</h2>
-      <ul>
-        <li>Partenariats civils-militaires : hôpitaux universitaires, centres de recherche.</li>
-        <li>Investissements européens dans la Défense et la santé.</li>
-        <li>Technologies avancées : télémédecine, robotique, intelligence artificielle.</li>
-        <li>Formation et simulation médicale : devenir centre d’excellence en simulation de soins d’urgence.</li>
-      </ul>
-    </div>
-    <div class="box threats">
-      <h2>Menaces (Threats)</h2>
-      <ul>
-        <li>Concurrence hospitalière civile : fuite des talents vers le secteur civil.</li>
-        <li>Risque de réductions budgétaires futures dans la Défense.</li>
-        <li>Vieillissement du personnel médical militaire.</li>
-        <li>Cyberattaques ciblant des données sensibles (patients, missions).</li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer">
-    &copy; 2025 Hôpital Militaire Reine Astrid - Analyse SWOT présentée dans le cadre d'un projet académique.
   </div>
 </body>
 </html>
