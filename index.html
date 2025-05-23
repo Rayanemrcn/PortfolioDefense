@@ -17,6 +17,41 @@
       background-attachment: fixed;
       background-position: center;
     }
+    header {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 220px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+      z-index: 1000;
+      border-radius: 5px;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 0.9rem;
+    }
+    .dropdown-content a:hover {
+      background-color: #444;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
     .container {
       max-width: 800px;
       margin: auto;
@@ -27,7 +62,7 @@
     }
     h1 {
       text-align: center;
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       color: #fdd835;
       margin-bottom: 1.5rem;
       text-shadow: 1px 1px 4px #000;
@@ -48,25 +83,6 @@
       margin-left: 1.2rem;
       list-style: disc;
     }
-    .button-container {
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    .btn-link {
-      display: inline-block;
-      margin: 0.3rem;
-      padding: 10px 20px;
-      background-color: #00bcd4;
-      color: #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
-      font-size: 0.95rem;
-    }
-    .btn-link:hover {
-      background-color: #0097a7;
-    }
     .logo {
       display: block;
       margin: 0 auto 1.5rem;
@@ -81,6 +97,22 @@
   </style>
 </head>
 <body>
+  <header>
+    <div class="dropdown">
+      <span style="cursor: pointer; font-weight: bold; color: #00bcd4;">Menu ▼</span>
+      <div class="dropdown-content">
+        <a href="pitch.html">Pitch</a>
+        <a href="statut.html">Statuts de l'entreprise</a>
+        <a href="prix.html">Politique de prix</a>
+        <a href="innovation.html">Innovation de l'entreprise</a>
+        <a href="swot.html">Analyse SWOT</a>
+        <a href="canva.html">Business Canvas Model</a>
+        <a href="segmentation.html">Segmentation, positionnement, ciblage</a>
+        <a href="concurrence.html">Analyse de la concurrence</a>
+        <a href="valeurs.html">Mission, Vision et Valeurs</a>
+      </div>
+    </div>
+  </header>
   <div class="container">
     <img src="mhka_logo_with_heraldic_royal_crown_of_belgium.png" alt="Logo Hôpital Militaire" class="logo">
     <h1>Introduction</h1>
@@ -92,46 +124,35 @@
         Bien que La Défense ne soit pas une entreprise au sens classique du terme, elle fonctionne selon des principes similaires :
       </p>
       <ul>
-        <li>Objectifs de performance et de qualité de service,</li>
-        <li>Stratégie de gestion et d’innovation,</li>
-        <li>Référentiel de comparaison avec le secteur privé.</li>
+        <li>Objectifs de performance et de qualité de service</li>
+        <li>Stratégie de gestion et d’innovation</li>
+        <li>Référentiel de comparaison avec le secteur privé</li>
       </ul>
       <p>
         L’Hôpital Militaire Reine Astrid se distingue comme centre médico-militaire de référence en Belgique. Il combine :
       </p>
       <ul>
-        <li>Des soins spécialisés,</li>
-        <li>Une expertise en médecine militaire,</li>
-        <li>Un soutien logistique aux forces armées,</li>
-        <li>Une collaboration active avec le secteur civil.</li>
+        <li>Des soins spécialisés</li>
+        <li>Une expertise en médecine militaire</li>
+        <li>Un soutien logistique aux forces armées</li>
+        <li>Une collaboration active avec le secteur civil</li>
       </ul>
       <p>
         Toutefois, son statut public impose certaines particularités :
       </p>
       <ul>
-        <li>Absence de publication de comptes à la BNB,</li>
-        <li>Objectif de service public (santé, sécurité, réactivité),</li>
-        <li>Non-orientation vers la rentabilité financière.</li>
+        <li>Absence de publication de comptes à la BNB</li>
+        <li>Objectif de service public (santé, sécurité, réactivité)</li>
+        <li>Non-orientation vers la rentabilité financière</li>
       </ul>
       <p>
         Ce travail mobilise des outils classiques d’analyse entrepreneuriale (SWOT, Business Canvas Model, stratégie marketing) en les adaptant au contexte d’un <strong>acteur public non-marchand</strong>. L’objectif est de mettre en lumière :
       </p>
       <ul>
-        <li>Les dynamiques de gestion du HMRA,</li>
-        <li>Sa stratégie d’innovation,</li>
-        <li>Son positionnement au sein du système médico-militaire belge.</li>
+        <li>Les dynamiques de gestion du HMRA</li>
+        <li>Sa stratégie d’innovation</li>
+        <li>Son positionnement au sein du système médico-militaire belge</li>
       </ul>
-    </div>
-    <div class="button-container">
-      <a href="pitch.html" class="btn-link">Pitch</a>
-      <a href="statut.html" class="btn-link">Statuts de l'entreprise</a>
-      <a href="prix.html" class="btn-link">Politique de prix</a>
-      <a href="innovation.html" class="btn-link">Innovation de l'entreprise</a>
-      <a href="swot.html" class="btn-link">Analyse SWOT</a>
-      <a href="canva.html" class="btn-link">Business Canvas Model</a>
-      <a href="segmentation.html" class="btn-link">Détail de la segmentation, le positionnement, ciblage et la différenciation</a>
-      <a href="concurrence.html" class="btn-link">Analyse de la concurrence</a>
-      <a href="valeurs.html" class="btn-link">Mission, Vision et Valeurs</a>
     </div>
     <footer>
       Réalisé par BOUABDALLAH Rayane – Gestion entrepreneuriale
